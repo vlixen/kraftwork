@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - KraftWork</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="mibarrafondo">
+                <div class="container">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="milogo">
+                            @Html.ActionLink("KraftWork", "Index", "Home")
+                        </div>
+                    </div>
+                    <div class="mibarra">
+                        <div class="navbar-collapse collapse">
+
+                            <ul class="nav navbar-nav">
+
+                                <li>@Html.ActionLink("Productos", "Index", "Productoes")</li>
+
+                                <li>
+                                    @if (Session["UsuarioID"] == null)
+                                    {
+
+                                        @Html.ActionLink("Acceder", "acceso", "cuenta")
+                                    }
+                                </li>
+
+                                <li>
+                                    @if (Session["UsuarioID"] != null)
+                                    {
+
+                                        @Html.ActionLink("Categorias", "Index", "ProductoTipoes")
+                                    }
+
+
+                                </li>
+                                <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                                <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                                <li>
+                                    @if (Session["UsuarioID"] != null)
+                                    {
+
+                                        @Html.ActionLink(Session["Correo"].ToString(), "Index")
+                                    }
+                                </li>
+                                <li>
+                                    @if (Session["UsuarioID"] != null)
+                                    {
+                                        @Html.ActionLink("Salir", "Salir", "Cuenta")
+                                    }
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - KraftWork</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

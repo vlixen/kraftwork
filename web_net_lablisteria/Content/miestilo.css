@@ -1,0 +1,77 @@
+﻿body {
+    
+
+}
+@font-face {
+    font-family: Mohr;
+    src: url("../fonts/MohrRounded-Bold.ttf");
+}
+
+
+
+.mifuente {
+    font-family: Mohr;
+    color: #ffffff;
+}
+
+.milogo {
+    font-family: Mohr;
+    float: left;
+    height: 50px;
+    padding: 12px 12px;
+    font-size: 18px;
+    line-height: 20px;
+
+}
+
+    .milogo > a {
+        color: #282828;
+    }
+
+.milogo > a:hover {
+
+    text-decoration: none;
+}
+
+.mibarrafondo {
+    background-color: #ffffff;
+    /* background-image: linear-gradient(to right, #0e4069, #00b6dd);*/
+    border-color: #ffffff;
+    border-bottom: #ffffff;
+}
+
+
+
+.jumbotron {
+    background-image: linear-gradient(45deg, #0e4069, #00b6dd);
+
+    width: 100%;
+}
+
+
+.jumbotron-fluid {
+    margin-left: 0px;
+}
+    .mibarra > li > a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #282828;
+
+}
+.mimargen {
+    margin-left: 0px;
+}
+
+
+
+
+.navbar-inverse {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.container-fluid {
+    min-width: 100%
+}

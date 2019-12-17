@@ -1,0 +1,25 @@
+﻿@model LaBlisteria.Models.ProductoTipo
+
+@{
+    ViewBag.Title = "Detalles de categoria";
+}
+
+    <h2>Detalles de categoria</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductoTipoNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductoTipoNombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ProductoTipoID }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

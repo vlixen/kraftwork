@@ -1,0 +1,59 @@
+﻿@model LaBlisteria.Models.Producto
+
+@{
+    ViewBag.Title = "Detalles de producto";
+}
+
+    <h2>Detalles de producto</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductoTipo.ProductoTipoNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductoTipo.ProductoTipoNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @if (Session["UsuarioID"] != null)
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ProductoID })} |
+    @Html.ActionLink("Volver", "Index")
+</p>
